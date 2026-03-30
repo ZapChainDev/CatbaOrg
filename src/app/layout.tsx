@@ -17,8 +17,6 @@ const jsonLd = {
   description:
     "Non-profit community fitness organization in Catbalogan City, Samar, Philippines. Offering expert coaching, fitness education, and wellness programs open to everyone.",
   url: "https://www.catbalogan-fitness.com",
-  telephone: "+639123456789",
-  email: "info@catbaloganfa.com",
   foundingDate: "2026",
   address: {
     "@type": "PostalAddress",
@@ -50,10 +48,7 @@ const jsonLd = {
   priceRange: "$",
   isAccessibleForFree: false,
   nonprofitStatus: "Nonprofit501c3",
-  sameAs: [
-    "https://www.facebook.com/catbaloganfitness",
-    "https://www.instagram.com/catbaloganfitness",
-  ],
+  sameAs: ["https://www.facebook.com/profile.php?id=61580688798000"],
 };
 
 export const metadata: Metadata = {

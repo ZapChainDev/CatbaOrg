@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Dumbbell, Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Dumbbell, Facebook } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -9,10 +9,11 @@ const navLinks = [
 ];
 
 const socials = [
-  { Icon: Instagram, label: "Instagram" },
-  { Icon: Facebook, label: "Facebook" },
-  { Icon: Youtube, label: "YouTube" },
-  { Icon: Twitter, label: "Twitter" },
+  {
+    Icon: Facebook,
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61580688798000",
+  },
 ];
 
 export default function Footer() {
@@ -42,10 +43,12 @@ export default function Footer() {
               fitness coaching.
             </p>
             <div className="flex gap-2">
-              {socials.map(({ Icon, label }) => (
+              {socials.map(({ Icon, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 bg-zinc-800 hover:bg-orange-500 rounded-lg flex items-center justify-center transition-colors text-zinc-400 hover:text-white"
                 >
@@ -85,16 +88,19 @@ export default function Footer() {
                 <span>Catbalogan City, Samar, Philippines</span>
               </li>
               <li className="flex gap-2">
-                <span>📧</span>
-                <span>info@catbaloganfa.com</span>
-              </li>
-              <li className="flex gap-2">
-                <span>📞</span>
-                <span>+63 912 345 6789</span>
-              </li>
-              <li className="flex gap-2">
-                <span>🕒</span>
+                <span>�</span>
                 <span>Mon–Sat: 5:00 AM – 10:00 PM</span>
+              </li>
+              <li className="flex gap-2">
+                <span>💬</span>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61580688798000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-400 transition-colors"
+                >
+                  Message us on Facebook
+                </a>
               </li>
             </ul>
           </div>

@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Instagram,
-  Facebook,
-  Youtube,
-} from "lucide-react";
+import { MapPin, Clock, Facebook } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 
@@ -46,16 +38,6 @@ const contactInfo = [
     value: "Catbalogan City, Samar, Philippines",
   },
   {
-    Icon: Phone,
-    label: "Phone",
-    value: "+63 912 345 6789",
-  },
-  {
-    Icon: Mail,
-    label: "Email",
-    value: "info@catbaloganfa.com",
-  },
-  {
     Icon: Clock,
     label: "Hours",
     value: "Mon–Sat: 5:00 AM – 10:00 PM",
@@ -63,9 +45,12 @@ const contactInfo = [
 ];
 
 const socials = [
-  { Icon: Instagram, label: "Instagram", handle: "@catbaloganfa" },
-  { Icon: Facebook, label: "Facebook", handle: "Catbalogan Fitness Academy" },
-  { Icon: Youtube, label: "YouTube", handle: "CFA Fitness" },
+  {
+    Icon: Facebook,
+    label: "Facebook",
+    handle: "Catbalogan Fitness Association",
+    href: "https://www.facebook.com/profile.php?id=61580688798000",
+  },
 ];
 
 export default function ContactPage() {
@@ -138,10 +123,12 @@ export default function ContactPage() {
                     Follow Us
                   </h3>
                   <div className="flex flex-col gap-2">
-                    {socials.map(({ Icon, label, handle }) => (
+                    {socials.map(({ Icon, label, handle, href }) => (
                       <a
                         key={label}
-                        href="#"
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-white text-sm px-4 py-3 rounded-xl transition-all duration-200"
                       >
                         <Icon className="w-4 h-4 text-orange-400" />
