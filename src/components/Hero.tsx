@@ -60,7 +60,7 @@ export default function Hero() {
           <motion.div variants={itemVariants}>
             <span className="inline-flex items-center gap-1.5 sm:gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs sm:text-sm font-medium px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-center">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full animate-pulse shrink-0" />
-              Catbalogan&rsquo;s Premier Fitness Education Academy
+              Catbalogan&rsquo;s Premier Fitness Education Association
             </span>
           </motion.div>
 
@@ -81,9 +81,9 @@ export default function Hero() {
             variants={itemVariants}
             className="max-w-2xl text-lg sm:text-xl text-zinc-400 leading-relaxed"
           >
-            Catbalogan Fitness Academy is a non-profit organization dedicated to
-            promoting health, fitness, and community wellness for everyone in
-            Catbalogan City.
+            Catbalogan Fitness Association is a non-profit organization
+            dedicated to promoting health, fitness, and community wellness for
+            everyone in Catbalogan City.
           </motion.p>
 
           {/* CTA Buttons */}

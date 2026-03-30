@@ -4,9 +4,31 @@ import CoachCarousel from "@/components/CoachCard";
 import { coaches } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Coaches",
+  title: "Our Coaches",
   description:
-    "Meet the certified professionals leading Catbalogan Fitness Academy. Expert coaches with real credentials and community focus.",
+    "Meet the coaches of Catbalogan Fitness Association in Catbalogan City, Samar. Dedicated volunteer coaches delivering expert fitness guidance and community wellness programs.",
+  alternates: {
+    canonical: "https://www.catbalogan-fitness.com/coaches",
+  },
+  openGraph: {
+    title: "Our Coaches | Catbalogan Fitness Association",
+    description:
+      "Meet the coaches of Catbalogan Fitness Association in Catbalogan City, Samar. Dedicated expert coaches delivering community fitness and wellness programs.",
+    url: "https://www.catbalogan-fitness.com/coaches",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Coaches of Catbalogan Fitness Association",
+      },
+    ],
+  },
+  twitter: {
+    title: "Our Coaches | Catbalogan Fitness Association",
+    description:
+      "Meet the coaches of Catbalogan Fitness Association — dedicated experts delivering community fitness programs in Catbalogan City, Samar.",
+  },
 };
 
 export default function CoachesPage() {
@@ -128,7 +150,7 @@ export default function CoachesPage() {
               </p>
               <p className="text-zinc-400 leading-relaxed">
                 While CFA is a non-profit organization, a small coaching fee
-                applies to help cover operational costs and keep the academy
+                applies to help cover operational costs and keep the association
                 running sustainably for the community. All fees go directly back
                 into CFA.
               </p>

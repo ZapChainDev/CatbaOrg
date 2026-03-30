@@ -6,7 +6,33 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: {
+    absolute: "Catbalogan Fitness Association | Learn. Train. Transform.",
+  },
+  description:
+    "Join Catbalogan Fitness Association — a non-profit fitness organization in Catbalogan City, Samar. Community coaching, fitness education & wellness programs for all ages and levels.",
+  alternates: {
+    canonical: "https://www.catbalogan-fitness.com",
+  },
+  openGraph: {
+    title: "Catbalogan Fitness Association | Learn. Train. Transform.",
+    description:
+      "Join Catbalogan Fitness Association — a non-profit fitness organization in Catbalogan City, Samar. Community coaching, fitness education & wellness programs for all ages.",
+    url: "https://www.catbalogan-fitness.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Catbalogan Fitness Association – Learn. Train. Transform.",
+      },
+    ],
+  },
+  twitter: {
+    title: "Catbalogan Fitness Association | Learn. Train. Transform.",
+    description:
+      "Join Catbalogan Fitness Association — a non-profit fitness organization in Catbalogan City, Samar. Open to all ages and fitness levels.",
+  },
 };
 
 const features = [
@@ -48,7 +74,7 @@ export default function HomePage() {
             <SectionHeader
               badge="Who We Are"
               title="A community, not a business"
-              subtitle="Catbalogan Fitness Academy is a non-profit dedicated to making health and fitness accessible to everyone in Catbalogan City. Activity fees are at the coaches\' discretion — personal coaching rates apply."
+              subtitle="Catbalogan Fitness Association is a non-profit dedicated to making health and fitness accessible to everyone in Catbalogan City. Activity fees are at the coaches' discretion — personal coaching rates apply."
             />
           </AnimatedSection>
 
@@ -77,7 +103,7 @@ export default function HomePage() {
             <SectionHeader
               badge="Who We're For"
               title="Open to everyone"
-              subtitle="Catbalogan Fitness Academy was built for the people of Catbalogan City — open to everyone regardless of age, background, or fitness level."
+              subtitle="Catbalogan Fitness Association was built for the people of Catbalogan City — open to everyone regardless of age, background, or fitness level."
             />
           </AnimatedSection>
 
@@ -132,8 +158,8 @@ export default function HomePage() {
                   community.
                 </h2>
                 <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-                  Catbalogan Fitness Academy is open to everyone. Join us and
-                  move, connect, and grow alongside your neighbors.
+                  Catbalogan Fitness Association is open to everyone. Join us
+                  and move, connect, and grow alongside your neighbors.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link

@@ -5,9 +5,31 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Us",
   description:
-    "Learn about Catbalogan Fitness Academy's mission to empower the community through accessible fitness and wellness activities in Catbalogan City.",
+    "Learn about Catbalogan Fitness Association's mission and values. A non-profit empowering Catbalogan City, Samar with accessible fitness education, coaching, and community wellness.",
+  alternates: {
+    canonical: "https://www.catbalogan-fitness.com/about",
+  },
+  openGraph: {
+    title: "About Us | Catbalogan Fitness Association",
+    description:
+      "Learn about Catbalogan Fitness Association's mission and values. A non-profit empowering Catbalogan City, Samar with accessible fitness education and community wellness.",
+    url: "https://www.catbalogan-fitness.com/about",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Catbalogan Fitness Association",
+      },
+    ],
+  },
+  twitter: {
+    title: "About Us | Catbalogan Fitness Association",
+    description:
+      "Learn about Catbalogan Fitness Association's mission and values. A non-profit empowering Catbalogan City, Samar.",
+  },
 };
 
 const values = [
@@ -42,7 +64,7 @@ const milestones = [
     year: "2026",
     event: "CFA Founded",
     description:
-      "Catbalogan Fitness Academy was established by Coach Marissa Espares with a vision to promote health, fitness, and wellness for the people of Catbalogan City.",
+      "Catbalogan Fitness Association was established by Coach Marissa Espares with a vision to promote health, fitness, and wellness for the people of Catbalogan City.",
   },
   {
     year: "2026",
@@ -77,10 +99,10 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="text-zinc-400 text-lg sm:text-xl leading-relaxed max-w-2xl">
-                Catbalogan Fitness Academy was founded on a simple belief: the
-                most effective fitness journey starts with education. When you
-                understand your body, training becomes smarter, safer, and more
-                sustainable.
+                Catbalogan Fitness Association was founded on a simple belief:
+                the most effective fitness journey starts with education. When
+                you understand your body, training becomes smarter, safer, and
+                more sustainable.
               </p>
             </div>
           </AnimatedSection>
@@ -164,7 +186,7 @@ export default function AboutPage() {
             <SectionHeader
               badge="Our Story"
               title="How we got here"
-              subtitle="We are just getting started. Here is how Catbalogan Fitness Academy came to be in 2026."
+              subtitle="We are just getting started. Here is how Catbalogan Fitness Association came to be in 2026."
             />
           </AnimatedSection>
 
@@ -202,7 +224,7 @@ export default function AboutPage() {
                 Be part of our community
               </h2>
               <p className="text-zinc-400 text-lg mb-8 leading-relaxed max-w-xl mx-auto">
-                Join the Catbalogan Fitness Academy and start your
+                Join the Catbalogan Fitness Association and start your
                 education-first fitness journey today.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

@@ -102,8 +102,8 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-zinc-800/60 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-zinc-600 text-sm">
-            © {new Date().getFullYear()} Catbalogan Fitness Academy. All rights
-            reserved.
+            © {new Date().getFullYear()} Catbalogan Fitness Association. All
+            rights reserved.
           </p>
           <p className="text-zinc-700 text-sm">
             Non-profit · Catbalogan City, Samar

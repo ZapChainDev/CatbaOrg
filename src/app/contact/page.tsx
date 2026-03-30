@@ -12,9 +12,31 @@ import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   description:
-    "Get in touch with Catbalogan Fitness Academy. We're here to answer your questions about programs, courses, and coaching.",
+    "Contact Catbalogan Fitness Association in Catbalogan City, Samar. Reach us for questions about fitness programs, coaching schedules, and community wellness activities.",
+  alternates: {
+    canonical: "https://www.catbalogan-fitness.com/contact",
+  },
+  openGraph: {
+    title: "Contact Us | Catbalogan Fitness Association",
+    description:
+      "Contact Catbalogan Fitness Association in Catbalogan City, Samar. Reach us for questions about fitness programs, coaching schedules, and community wellness activities.",
+    url: "https://www.catbalogan-fitness.com/contact",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Catbalogan Fitness Association",
+      },
+    ],
+  },
+  twitter: {
+    title: "Contact Us | Catbalogan Fitness Association",
+    description:
+      "Contact Catbalogan Fitness Association in Catbalogan City, Samar for questions about fitness programs and coaching.",
+  },
 };
 
 const contactInfo = [
