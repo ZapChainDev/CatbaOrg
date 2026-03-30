@@ -5,7 +5,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/coaches", label: "Coaches" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Join" },
 ];
 
 const socials = [
