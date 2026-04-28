@@ -10,8 +10,10 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/coaches", label: "Coaches" },
-  { href: "/contact", label: "Join" },
+  { href: "/contact", label: "Contact" },
 ];
+
+const FB_URL = "https://www.facebook.com/profile.php?id=61580688798000";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -79,12 +81,14 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Link
-            href="/contact"
+          <a
+            href={FB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20"
           >
             Join Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -125,12 +129,14 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/contact"
+              <a
+                href={FB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl text-center transition-colors"
               >
                 Join Now
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

@@ -103,9 +103,9 @@ export default function CoachesPage() {
               },
               {
                 name: "John Mark Papelirin",
-                role: "Team Member",
-                initials: "JP",
-                color: "from-rose-500 to-pink-600",
+                role: "Coach",
+                initials: "JM",
+                color: "from-purple-500 to-violet-600",
               },
             ].map((member, i) => (
               <AnimatedSection key={member.name} delay={i * 0.1}>
