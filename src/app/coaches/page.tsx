@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import CoachCarousel from "@/components/CoachCard";
-import { coaches } from "@/lib/data";
+import { coaches, members } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Our Coaches",
@@ -95,12 +96,7 @@ export default function CoachesPage() {
                 initials: "CJ",
                 color: "from-green-500 to-teal-600",
               },
-              {
-                name: "Jade Vasquez",
-                role: "Team Member",
-                initials: "JV",
-                color: "from-purple-500 to-violet-600",
-              },
+
               {
                 name: "John Mark Papelirin",
                 role: "Coach",
@@ -126,6 +122,41 @@ export default function CoachesPage() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+
+          {/* Community Members */}
+          <div className="mt-12">
+            <AnimatedSection className="mb-6">
+              <span className="inline-block text-orange-400 text-sm font-semibold uppercase tracking-widest mb-3">
+                Community Members
+              </span>
+              <h2 className="text-2xl font-black text-white">Our members</h2>
+            </AnimatedSection>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl">
+              {members.map((member, i) => (
+                <AnimatedSection key={member.id} delay={i * 0.1}>
+                  <div className="flex items-center gap-4 bg-zinc-900 border border-zinc-800 rounded-2xl p-5">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 relative">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-white font-bold text-sm">
+                        {member.name}
+                      </p>
+                      <p className="text-zinc-500 text-xs">
+                        {member.year} · {member.course}
+                      </p>
+                      <p className="text-zinc-600 text-xs">{member.school}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +190,7 @@ export default function CoachesPage() {
             <AnimatedSection direction="right">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "3", label: "Coaches" },
+                  { value: "4", label: "Coaches" },
                   { value: "2026", label: "Year Founded" },
                 ].map((stat) => (
                   <div
