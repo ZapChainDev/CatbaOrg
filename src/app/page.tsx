@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, Users, Target, Zap } from "lucide-react";
+import { BookOpen, Users, Target, Zap, Quote } from "lucide-react";
 import Hero from "@/components/Hero";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeader from "@/components/SectionHeader";
+import { members } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: {
@@ -132,6 +134,59 @@ export default function HomePage() {
                   <p className="text-zinc-400 text-sm leading-relaxed flex-1">
                     {card.body}
                   </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Member Spotlights Section */}
+      <section className="py-24 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="mb-16">
+            <SectionHeader
+              badge="Member Spotlight"
+              title="Real people, real journeys"
+              subtitle="Meet the members of Catbalogan Fitness Association — students, professionals, and community members taking their health seriously."
+            />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {members.map((member, i) => (
+              <AnimatedSection key={member.id} delay={i * 0.1}>
+                <div className="bg-zinc-900 border border-zinc-800 hover:border-orange-500/30 rounded-2xl p-6 flex flex-col gap-4 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/5 h-full">
+                  <Quote className="w-6 h-6 text-orange-400 opacity-60" />
+                  <p className="text-zinc-300 text-sm leading-relaxed flex-1 italic">
+                    &ldquo;{member.quote}&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3 pt-2 border-t border-zinc-800">
+                    {member.image ? (
+                      <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 relative">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className={`w-10 h-10 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center text-white font-bold text-sm shrink-0`}
+                      >
+                        {member.initials}
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-white font-semibold text-sm">
+                        {member.name}
+                      </p>
+                      <p className="text-zinc-500 text-xs">
+                        {member.year} · {member.course}
+                      </p>
+                      <p className="text-zinc-600 text-xs">{member.school}</p>
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}

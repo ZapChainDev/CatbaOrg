@@ -116,6 +116,21 @@ export const courses = [
   },
 ];
 
+export const members = [
+  {
+    id: 1,
+    name: "Jade Vasquez",
+    year: "3rd Year",
+    course: "Bachelor of Science in Business Administration",
+    school: "Samar College Inc.",
+    initials: "JV",
+    color: "from-pink-500 to-rose-600",
+    image: "/Jade.jpg",
+    quote:
+      "Fitness for beginners starts with building healthy habits through regular exercise, balanced nutrition, and proper rest. Begin with simple workouts such as walking, jogging, bodyweight exercises, or light strength training to improve stamina and strength.",
+  },
+];
+
 export const coaches = [
   {
     id: 1,
@@ -124,7 +139,7 @@ export const coaches = [
     specialization: "Strength. Mobility. Confidence.",
     experience: "7 Years",
     certifications: [],
-    bio: "7 years of consistent training — helping women build strength, sculpt their physique, and find balance through intentional strength training and yoga mobility practices.",
+    bio: "Combining healthcare knowledge with 7 years of consistent training experience to help women build strength, sculpt their bodies, and create a holistic approach to women's health and body transformation.\n\nAs a nurse, I understand the importance of sustainable health, injury prevention, and long-term wellness. As a fitness coach, I guide women through intentional strength training and yoga to create balanced, stronger bodies, develop healthy habits that support both physical and mental wellness.",
     initials: "ME",
     color: "from-orange-500 to-red-600",
     image: "/marissa.jpg",
