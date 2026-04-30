@@ -26,7 +26,7 @@ const itemVariants: Variants = {
 
 const stats = [
   { value: "2026", label: "Year Founded" },
-  { value: "3", label: "Coaches" },
+  { value: "4", label: "Coaches" },
   { value: "Catbalogan", label: "City" },
   { value: "Nonprofit", label: "Organization" },
 ];
