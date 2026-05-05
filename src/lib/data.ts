@@ -133,6 +133,18 @@ export const members = [
 
 export const coaches = [
   {
+    id: 0,
+    name: "Jade Vasquez",
+    title: "3rd Year BSBA · Samar College Inc.",
+    specialization: "Community Member",
+    experience: "Member",
+    certifications: [],
+    bio: "Fitness for beginners starts with building healthy habits through regular exercise, balanced nutrition, and proper rest. Begin with simple workouts such as walking, jogging, bodyweight exercises, or light strength training to improve stamina and strength.",
+    initials: "JV",
+    color: "from-pink-500 to-rose-600",
+    image: "/Jade.jpg",
+  },
+  {
     id: 1,
     name: "Coach Marissa Espares",
     title: "UK Registered Nurse | Health and Fitness Coach",
