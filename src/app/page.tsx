@@ -139,6 +139,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Coming Soon */}
+      <section className="py-24 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="mb-12">
+            <SectionHeader
+              badge="Coming Soon"
+              title="More exciting things ahead"
+              subtitle="We're working on some big things for the CFA community. Stay tuned."
+            />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            {[
+              {
+                icon: "👕",
+                title: "Merch Soon",
+                desc: "Official CFA gear is on the way. Represent the community.",
+              },
+              {
+                icon: "🎉",
+                title: "More Surprises",
+                desc: "Exciting updates, events, and more coming your way.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="flex flex-col items-center text-center bg-zinc-900 border border-zinc-800 rounded-2xl p-8 h-full">
+                  <div className="text-5xl mb-4">{item.icon}</div>
+                  <h3 className="text-white font-bold text-lg mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-zinc-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                  <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-widest text-orange-400 border border-orange-500/30 rounded-full px-3 py-1">
+                    Coming Soon
+                  </span>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="py-24 bg-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
